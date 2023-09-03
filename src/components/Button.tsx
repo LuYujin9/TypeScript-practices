@@ -3,6 +3,9 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  return <button onClick={props.handleClick}>click</button>;
+  return (
+    <button onClick={(event) => props.handleClick(event, 1)}>click</button>
+  );
 };
+//当component里面需要给event props 赋予 parameter value时, 加上array function
 export default Button;
