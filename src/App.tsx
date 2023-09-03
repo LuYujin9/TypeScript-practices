@@ -10,6 +10,8 @@ import UserContextProvider from "./components/context/UserContext";
 import User from "./components/context/User";
 import Counter from "./components/state/Counter";
 import { CounterTwo } from "./components/class/CounterTwo";
+import Private from "./components/componentProp/Private";
+import Profile from "./components/componentProp/Profile";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -43,6 +45,7 @@ function App() {
         <User />
       </UserContextProvider>
       <CounterTwo message="The count value is " />
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
