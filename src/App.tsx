@@ -6,6 +6,8 @@ import Input from "./components/Input";
 import Oscar from "./components/Oscar";
 import Box from "./components/context/Box";
 import ThemeContextProvider from "./components/context/ThemeContext";
+import UserContextProvider from "./components/context/UserContext";
+import User from "./components/context/User";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -34,6 +36,9 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
