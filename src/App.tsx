@@ -12,6 +12,7 @@ import Counter from "./components/state/Counter";
 import { CounterTwo } from "./components/class/CounterTwo";
 import Private from "./components/componentProp/Private";
 import Profile from "./components/componentProp/Profile";
+import List from "./components/generics/List";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -46,6 +47,14 @@ function App() {
       </UserContextProvider>
       <CounterTwo message="The count value is " />
       <Private isLoggedIn={true} component={Profile} />
+      {/*    <List
+        items={[
+          { name: "Batman", id: 1 },
+          { name: "Superman", id: 2 },
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
+      <List items={[1, 2]} onClick={(item) => console.log(item)} />
     </div>
   );
 }
