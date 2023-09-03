@@ -24,7 +24,7 @@ const Greet = (props: GreetProps) => {
       </p>
       {props.petsOffriends
         ? props.petsOffriends.map((pet) => (
-            <p>
+            <p key={pet.cat}>
               {pet.cat}
               {pet.dog}
             </p>

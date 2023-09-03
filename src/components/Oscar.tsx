@@ -3,6 +3,6 @@ type OscarProps = {
 }; //允许react node 作为children. 例如一个element
 
 const Oscar = (props: OscarProps) => {
-  return <h1>{props.children}</h1>;
+  return <div>{props.children}</div>;
 };
 export default Oscar;
