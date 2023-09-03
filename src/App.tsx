@@ -15,6 +15,7 @@ import Profile from "./components/componentProp/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateliterals/Toast";
+import CustomButton from "./components/html/CustomButton";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -59,6 +60,9 @@ function App() {
       <List items={[1, 2]} onClick={(item) => console.log(item)} />
       <RandomNumber value={10} isPositive />
       <Toast position="center" />
+      <CustomButton variant="primary" onClick={() => console.log("Clicked")}>
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
