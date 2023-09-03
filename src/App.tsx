@@ -15,7 +15,9 @@ function App() {
   return (
     <div>
       <Oscar>
-        <Heading>Placeholder text</Heading>
+        <Heading styles={{ border: "none", padding: "1em" }}>
+          Placeholder text
+        </Heading>
       </Oscar>
       <Greet
         name="Jane"
