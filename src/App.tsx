@@ -8,8 +8,8 @@ import Box from "./components/context/Box";
 import ThemeContextProvider from "./components/context/ThemeContext";
 import UserContextProvider from "./components/context/UserContext";
 import User from "./components/context/User";
-import DomRef from "./components/ref/DomRef";
-import MutableRef from "./components/ref/MutableRef";
+import Counter from "./components/state/Counter";
+import { CounterTwo } from "./components/class/CounterTwo";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -33,6 +33,7 @@ function App() {
         petsOffriends={petsOffriends}
         status="loading"
       />
+      <Counter />
       <Button handleClick={(event, id) => console.log("button", event, id)} />
       <Input value="" handleChange={(event) => console.log(event)} />
       <ThemeContextProvider>
@@ -41,7 +42,7 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
-      <MutableRef />
+      <CounterTwo message="The count value is " />
     </div>
   );
 }
