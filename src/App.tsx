@@ -13,6 +13,7 @@ import { CounterTwo } from "./components/class/CounterTwo";
 import Private from "./components/componentProp/Private";
 import Profile from "./components/componentProp/Profile";
 import List from "./components/generics/List";
+import RandomNumber from "./components/restriction/RandomNumber";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -55,6 +56,7 @@ function App() {
         onClick={(item) => console.log(item)}
       /> */}
       <List items={[1, 2]} onClick={(item) => console.log(item)} />
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
