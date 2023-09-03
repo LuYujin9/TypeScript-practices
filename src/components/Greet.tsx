@@ -1,11 +1,4 @@
-type GreetProps = {
-  name: string;
-  messageCount: number;
-  isLoggedIn: boolean;
-  pets: { cat: string; dog: string }; //object
-  petsOffriends?: { cat: string; dog: string }[]; //array with object. 加上问号表示optical
-  status: "loading" | "success" | "error";
-};
+import { GreetProps } from "./Greet.types";
 //props 使用定义的type,用:
 const Greet = (props: GreetProps) => {
   let message;
