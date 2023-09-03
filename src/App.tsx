@@ -14,6 +14,7 @@ import Private from "./components/componentProp/Private";
 import Profile from "./components/componentProp/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateliterals/Toast";
 
 function App() {
   const pets = { cat: "Lili", dog: "Leo" };
@@ -57,6 +58,7 @@ function App() {
       /> */}
       <List items={[1, 2]} onClick={(item) => console.log(item)} />
       <RandomNumber value={10} isPositive />
+      <Toast position="center" />
     </div>
   );
 }
