@@ -1,9 +1,17 @@
 import { useReducer } from "react";
 
-type CounterAction = {
-  type: string;
+type UpdateAction = {
+  //  type: string;
+  type: "increment" | "decrement" | "reset"; //strict Action Type
   payload: number;
 };
+
+type ResetAction = {
+  type: "reset";
+};
+
+type CounterAction = UpdateAction | ResetAction; // 当值有两种情况下,可以分别type再reuse
+
 type CounterState = {
   count: number;
 };
@@ -20,6 +28,8 @@ function reducer(state: CounterState, action: CounterAction) {
       return {
         count: state.count - action.payload,
       };
+    case "reset":
+      return initialState;
     default:
       return state;
   }
@@ -36,6 +46,7 @@ const Counter = () => {
       <button onClick={() => dispatch({ type: "decrement", payload: 10 })}>
         increment 10
       </button>
+      <button onClick={() => dispatch({ type: "reset" })}>reset</button>
     </>
   );
 };
